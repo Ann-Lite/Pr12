@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pr12.MainPage">
+
+    <StackLayout>
+        <Frame>
+            <Label x:Name="SelectedText" Text="mdfngjfng" TextColor="Black" HorizontalOptions="Center" FontSize="36"/>
+        </Frame>
+        <ListView x:Name="MovieList" ItemTapped="MovieList_ItemTapped" HasUnevenRows="True" IsPullToRefreshEnabled="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding NameFilm}" TextColor="Black" FontSize="18"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding Genre}"/>
+                                <Label Text="{Binding Year}"/>
+                                <Label Text="длительность - "/>
+                                <Label Text="{Binding Length}"/>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="AddItem" Text="Добавить" BackgroundColor="Transparent" Clicked="AddItem_Clicked"/>
+        <Button x:Name="ChangeItem" Text="Просмотр и редактрирование" BackgroundColor="Transparent" Clicked="ChangeItem_Clicked" />
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Жанр" Margin="10,15,0,0" TextColor="White"/>
+            <Entry x:Name="findGenre" Margin="5,0,0,0" Placeholder = "Введите жанр"/>
+            <Button x:Name="Find" Text="Поиск" Margin="5,0,10,0" BackgroundColor="Transparent" Clicked="Find_Clicked"/>
+        </StackLayout>
+        <Button x:Name="RemoveItem" Text="Удалить" BackgroundColor="Transparent" Clicked="RemoveItem_Clicked"/>
+    </StackLayout>
+
+</ContentPage>

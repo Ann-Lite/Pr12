@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pr12.ChangeP">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Black">
+            <TableView>
+                <TableRoot>
+                    <TableSection>
+                        <ViewCell>
+                            <StackLayout x:Name="name" Orientation="Horizontal">
+                                <Label  Text="Название" Margin="10,10,0,0"/>
+                                <Entry x:Name="nameFilm" Placeholder = "Введите название"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell >
+                            <StackLayout x:Name="gen" Orientation="Horizontal">
+                                <Label  Text="Жанр" Margin="10,10,0,0"/>
+                                <Entry x:Name="genre" Placeholder = "Введите жанр"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout x:Name="yea" Orientation="Horizontal">
+                                <Label Text="год" Margin="10,10,0,0"/>
+                                <Entry x:Name="year" Placeholder = "Введите год" MaxLength="4"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout x:Name="len" Orientation="Horizontal">
+                                <Label Text="Длительность" Margin="10,10,0,0"/>
+                                <Entry x:Name="lenght" Placeholder = "Введите длительность" MaxLength="4"/>
+                            </StackLayout>
+                        </ViewCell>
+                        <ViewCell>
+                            <StackLayout>
+                                <Button x:Name="Save" IsVisible="false" Text="Сохранить" BackgroundColor="Transparent" Clicked="Save_Clicked"/>
+                                <Button x:Name="Chang" Text="Редактировать" BackgroundColor="Transparent" Clicked="Chang_Clicked"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
